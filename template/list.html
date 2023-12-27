@@ -1,0 +1,54 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Estudo {List-Json-Golang}-</title>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <!-- Bootstrap CSS -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         
+          </head>
+    <body>
+     
+      <div class="container">
+               <table class="table ">
+          <thead>
+            <tr>
+              <th> <a href="/login" class="btn btn-success" tabindex="-1" role="button" aria-disabled="true">Incluir</a></th>
+             
+              <th><H1>LISTA JSON</H1></th>
+              <th></th>
+            
+            </tr>
+            <tr>
+              <!-- <th scope="col">Id</th> -->
+              <th scope="col">Nome</th>
+              <th scope="col">Email</th>
+              <th scope="col">Operação</th>
+            </tr>
+          </thead>
+          <tbody>
+              {{range.}}
+            <tr>
+              <!-- <td>{{.Id}}</td> -->
+              <td>{{.Nome}}</td>
+              <td>{{.Email}}</td>
+              <td>
+                  <!-- <a name="" id="" class="btn btn-warning" href="#" role="button">Editar</a> -->
+                  <a name="" id="" class="btn btn-danger" href="/deletar?nome={{.Nome}}" role="button">Deletar</a>
+              </td>
+            </tr>
+           
+            {{end}}
+          </tbody>
+        </table>
+      </div>
+        
+    </body>
+    </html>
+ 
